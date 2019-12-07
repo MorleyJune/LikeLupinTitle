@@ -34,7 +34,7 @@ else:
     soundfile2 = os.getcwd() + "\\lupin.wav"
 
 
-# 最後の音の長さ
+# 最後の音の長さ( フレーム数で指定 )
 soundLen = 231
 
 # 入力された文字列のうち、文字列のスペースは削除
