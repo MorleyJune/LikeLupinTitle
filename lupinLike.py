@@ -1,33 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-# AviUtlのエクスポートファイル版ルパン三世風タイトルパーツメーカー
-# Copyright 2017,2018 pandanote.info (https://pandanote.info/)
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-#
-# 音源については別途ご用意いただき、コマンドラインの引数で指定してください。
-# 画面サイズは1920x1200、オーディオレートは44100Hz、
-# サンプリング周波数は30fpsで決め打ちです。
-# その他、いろいろと決め打ちなところがあります。
-#
-# 使用法: 1. 第2引数(-gオプションを指定した場合は第3引数)を省略すると画像のみの
-#          出力となります。
-#        2. 第1引数として"-g"を指定すると、すべてのオブジェクトがグループ化された
-#          状態で出力されます。
-# python3 lupin3rdtwexo.py [-g] <表示したい文字列> [<音声ファイルのフルパス>]
-#
 import os
 import io
 import sys
@@ -38,7 +11,7 @@ from binascii import hexlify
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='shift_jis')
 f = open( "lupin.exo", "w")
 if len(sys.argv) <= 1:
-    print("Usage: lupin3rdtwexo.py [-g] <exo-file-name> <string to type> <sound file (in full path)>")
+    print("Usage: lupin3rdtwexo.py [-g] <string to type> <sound file (in full path)>")
     sys.exit(1)
 
 is_grouping = 0
@@ -64,7 +37,7 @@ else:
 # 最後の音の長さ
 soundLen = 231
 
-# 入力された文字列のうち、文字列のスペースは削除します。
+# 入力された文字列のうち、文字列のスペースは削除
 inputstr = re.sub(r'\s+',"",tmpstr)
 noLineInputStr = re.sub(r'\\n+', "", inputstr)
 noLineStrLen = len( noLineInputStr )
@@ -85,8 +58,7 @@ f.write('audio_rate=44100\n')
 f.write('audio_ch=2\n')
 
 
-# ルパンタイトル文字列
-
+# ルパンタイトル文字列, 金の髭氏のスクリプトを使用
 f.write('[0]\n')
 f.write('start=1\n')
 f.write('end={0:d}\n'.format( frameNum + soundLen ) )
@@ -228,4 +200,6 @@ f.write("\n")
 f.write("_name=標準再生\n")
 f.write("音量=100.0\n")
 f.write("左右=0.0\n")
+
+# ファイルを閉じる
 f.close()
