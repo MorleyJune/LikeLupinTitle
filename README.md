@@ -31,4 +31,6 @@ python lupinLike.py 適当な\n文字
 ```
   
 すると,lupin.exoが生成されるので, それをAviUtlのタイムラインに投げてエンコードする.  
-TOBECONTINUED
+test.mp4はそのできあがった動画ファイルである.  
+  
+一体誰の役に立つのだろうか. だがまあ共有しておくのも悪くない.  
