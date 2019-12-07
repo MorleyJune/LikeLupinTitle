@@ -17,7 +17,7 @@
   
 が必要で、そのうえで  
   
-- [金の髭氏のルパンタイトル風スクリプト](https://aviutlscript.wiki.fc2.com/wiki/%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%8A%B9%E6%9E%9C%EF%BC%91)  
+- [金の髭氏のルパンタイトル風スクリプト](https://aviutlscript.wiki.fc2.com/wiki/%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%8A%B9%E6%9E%9C%EF%BC%91)をAviUtlのscriptフォルダにルパン.anmとして保存する  
 - フリーフォント「 [幻ノにじみ明朝](http://www.fontna.com/blog/1912/) 」を導入する  
 - 効果音ラボ様の[タイプライター音](https://soundeffect-lab.info/sound/anime/)( 各文字表示時の音 )  
 - ニコニ・コモンズ様の[演出音](http://commons.nicovideo.jp/material/nc105836)( 全文字表示時の音 )  
